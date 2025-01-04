@@ -15,6 +15,8 @@ vim.api.nvim_exec([[tnoremap <Esc> <C-\><C-n>]], false)
 vim.api.nvim_set_keymap("n", "<C-j>", ":m .+1<CR>==", { noremap = true})
 vim.api.nvim_set_keymap("n", "<C-k>", ":m .-2<CR>==", { noremap = true})
 vim.api.nvim_set_keymap("n", "<C-d>", ":co .<CR>==", { noremap = true})
+vim.keymap.set('n', '<M-,>', ':bprevious<CR>', { desc = "Switch to previous buffer", silent = true })
+vim.keymap.set('n', '<M-.>', ':bnext<CR>', { desc = "Switch to next buffer", silent = true })
 
 require('gitsigns').setup {
   signs = {
