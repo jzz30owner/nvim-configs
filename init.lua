@@ -153,3 +153,56 @@ require('nvim-treesitter.configs').setup {
     disable = { "c", "cpp" }, -- Disable indentation for C and C++
   },
 }
+
+-- Telescope setup
+local telescope = require('telescope')
+local builtin = require('telescope.builtin')
+
+telescope.setup {
+  defaults = {
+    vimgrep_arguments = {
+      'rg',
+      '--color=never',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      '--smart-case',
+    },
+    prompt_prefix = "🔍 ",
+    selection_caret = "➤ ",
+    path_display = { "smart" },
+    mappings = {
+      i = {
+        ["<C-n>"] = "move_selection_next",
+        ["<C-p>"] = "move_selection_previous",
+        ["<C-c>"] = "close",
+      },
+    },
+  },
+  pickers = {
+    find_files = {
+      theme = "dropdown", -- Use dropdown layout for `find_files`
+    },
+  },
+  extensions = {
+    -- Example: fzf-native extension
+    fzf = {
+      fuzzy = true, -- Enable fuzzy search
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = "smart_case", -- Case sensitivity: smart_case | ignore_case | respect_case
+    },
+  },
+}
+
+telescope.load_extension('fzf')
+
+-- File-related commands
+vim.keymap.set('n', 'FF', builtin.find_files, { desc = "Find Files" })
+vim.keymap.set('n', 'FG', builtin.live_grep, { desc = "Live Grep" })
+vim.keymap.set('n', 'FB', builtin.buffers, { desc = "Find Buffers" })
+vim.keymap.set('n', 'FH', builtin.help_tags, { desc = "Find Help Tags" })
+
+-- Search within the current buffer
+vim.keymap.set('n', 'FS', builtin.current_buffer_fuzzy_find, { desc = "Search Buffer" })

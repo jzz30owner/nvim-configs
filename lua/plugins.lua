@@ -51,6 +51,9 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-buffer'     -- Buffer completions
   use 'hrsh7th/cmp-path'       -- Path completions
   use 'hrsh7th/cmp-cmdline'    -- Command-line completions
+	use 'sakhnik/nvim-gdb'
+	use {'nvim-telescope/telescope.nvim', tag = '0.1.2', requires = { {'nvim-lua/plenary.nvim'} }}
+	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 	use {
         'nvim-treesitter/nvim-treesitter',
         run = function()

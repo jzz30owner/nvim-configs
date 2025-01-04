@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/user/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-gdb"] = {
+    loaded = true,
+    path = "/home/user/.local/share/nvim/site/pack/packer/start/nvim-gdb",
+    url = "https://github.com/sakhnik/nvim-gdb"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/user/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -123,6 +128,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/user/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/user/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/user/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/user/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["vim-cmake"] = {
     loaded = true,
