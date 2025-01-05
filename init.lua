@@ -17,6 +17,8 @@ vim.api.nvim_set_keymap("n", "<C-k>", ":m .-2<CR>==", { noremap = true})
 vim.api.nvim_set_keymap("n", "<C-d>", ":co .<CR>==", { noremap = true})
 vim.keymap.set('n', '<M-,>', ':bprevious<CR>', { desc = "Switch to previous buffer", silent = true })
 vim.keymap.set('n', '<M-.>', ':bnext<CR>', { desc = "Switch to next buffer", silent = true })
+vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
 
 require('gitsigns').setup {
   signs = {
