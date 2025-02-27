@@ -42,6 +42,7 @@ packer.init({
 return packer.startup(function(use)
 	use ("wbthomason/packer.nvim") -- Have packer manage itself
 	use 'fedepujol/move.nvim'
+  use 'kassio/neoterm'
 	use 'cdelledonne/vim-cmake'
 	use 'Mofiqul/vscode.nvim'
 	use 'lewis6991/gitsigns.nvim'
