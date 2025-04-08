@@ -73,6 +73,7 @@ require('lspconfig').clangd.setup {
       clangdFileStatus = true,
       clangdSemanticHighlighting = true,
   },
+  root_markers = { '.clangd', 'compile_commands.json' },
   filetypes = {'c', 'cpp', 'cxx', 'cc'},
   root_dir = function() return vim.fn.getcwd() end,
   settings = {
@@ -201,6 +202,15 @@ telescope.setup {
 }
 
 telescope.load_extension('fzf')
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  severity_sort = false,
+  float = true,
+})
 
 -- File-related commands
 vim.keymap.set('n', 'FF', builtin.find_files, { desc = "Find Files" })
