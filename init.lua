@@ -220,3 +220,16 @@ vim.keymap.set('n', 'FH', builtin.help_tags, { desc = "Find Help Tags" })
 
 -- Search within the current buffer
 vim.keymap.set('n', 'FS', builtin.current_buffer_fuzzy_find, { desc = "Search Buffer" })
+
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", {
+  fg = "LightCoral",
+  bg = "NONE",
+})
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", {
+  underline = false,
+  fg = "LightCoral",
+  bg = "NONE",
+})
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn",  { fg = "Yellow", bg = "NONE" })
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo",  { fg = "Blue",   bg = "NONE" })
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint",  { fg = "Cyan",   bg = "NONE" })
