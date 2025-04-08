@@ -226,7 +226,7 @@ vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", {
   bg = "NONE",
 })
 vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", {
-  underline = false,
+  underline = true,
   fg = "LightCoral",
   bg = "NONE",
 })
